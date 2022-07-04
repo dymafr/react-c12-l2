@@ -37,11 +37,7 @@ export default function HomePage() {
             {recipes
               .filter((r) => r.title.toLowerCase().startsWith(filter))
               .map((r) => (
-                <Recipe
-                  key={r._id}
-                  recipe={r}
-                  toggleLikedRecipe={updateRecipe}
-                />
+                <Recipe key={r._id} title={r.title} image={r.image} />
               ))}
           </div>
         )}
